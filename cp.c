@@ -4,8 +4,7 @@
  * write without having the full file read. However the submission queues are
  * allowed to be asynchronous, so the I/O vectors can be non-sequential.
  *
- * Note: This doesn't work on large files. There's a vector restriction on
- * number of vectors in the readv/writev.
+ * Note: This doesn't work on large files. IOV_MAX limits to 1024 * 4KB = 4MB.
  */
 #define _GNU_SOURCE
 
